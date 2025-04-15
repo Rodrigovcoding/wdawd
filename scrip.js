@@ -17,18 +17,11 @@ const startDate = new Date("2022-08-11T21:00:00");
       const minutesRemaining = minutes % 60;
       const secondsRemaining = seconds % 60;
 
-      const timerElement = document.getElementById("timer");
-      if (timerElement) {
-        timerElement.textContent =
-          `${years} anos, ${monthsRemaining} meses, ${daysRemaining} dias, ` +
-          `${hoursRemaining} horas, ${minutesRemaining} minutos e ${secondsRemaining} segundos`;
-      }
-      const overlayElement = document.getElementById("overlay");
-      const contentElement = document.getElementById("content");
-      if (overlayElement && contentElement) {
-        overlayElement.style.display = "none";
-        contentElement.style.display = "block";
-      }
+      document.getElementById("timer").textContent =
+        `${years} anos, ${monthsRemaining} meses, ${daysRemaining} dias, ` +
+        `${hoursRemaining} horas, ${minutesRemaining} minutos e ${secondsRemaining} segundos`;
+    }
+
     function mostrarSite() {
       document.getElementById("overlay").style.display = "none";
       document.getElementById("content").style.display = "block";
